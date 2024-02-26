@@ -1,1 +1,1 @@
-# PlotBotFirmware
+# OmniPlotBotFirmware
