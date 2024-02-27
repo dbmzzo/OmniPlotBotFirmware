@@ -6,7 +6,6 @@
 #include <AccelStepper.h>
 
 void checkSleepLoop();
-void joystickLoop();
 void initMotionService();
 void motionLoop();
 void sleepAll();

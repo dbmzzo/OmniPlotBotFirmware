@@ -9,7 +9,7 @@ void sleepAll()
 {
   isSleeping = 1;
   wakeTimer = millis();
-  digitalWrite(18, LOW);
+  digitalWrite(SLEEP, LOW);
   delay(200);
 }
 
@@ -17,7 +17,7 @@ void wakeAll()
 {
   isSleeping = 0;
   wakeTimer = millis();
-  digitalWrite(18, HIGH);
+  digitalWrite(SLEEP, HIGH);
   delay(200);
 }
 
@@ -29,7 +29,7 @@ void checkSleepLoop()
     {
       wakeTimer = millis();
     }
-    if (millis() - wakeTimer > 15000.0 && isSleeping == 0)
+    if (millis() - wakeTimer > SLEEP_DELAY && isSleeping == 0)
     {
       sleepAll();
     }
@@ -45,15 +45,15 @@ void initMotionService()
   w1.setMaxSpeed(RUN_SPEED);
   w3.setMaxSpeed(RUN_SPEED);
   w2.setMaxSpeed(RUN_SPEED);
-  w1.setAcceleration(100);
-  w2.setAcceleration(100);
-  w3.setAcceleration(100);
+  w1.setAcceleration(ACCELERATION);
+  w2.setAcceleration(ACCELERATION);
+  w3.setAcceleration(ACCELERATION);
   steppers.addStepper(w1);
   steppers.addStepper(w2);
   steppers.addStepper(w3);
 }
 
-void joystickLoop()
+void motionLoop()
 {
   if (hasJoystickValues())
   {
@@ -81,7 +81,3 @@ void joystickLoop()
   }
 }
 
-void motionLoop()
-{
-  joystickLoop();
-}
