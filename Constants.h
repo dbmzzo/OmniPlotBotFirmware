@@ -16,7 +16,6 @@ const int RUN_SPEED = 4000;
 const int ACCELERATION = 100;
 const char FEED_SPEED = 150;
 const int MAX_COMMAND_SIZE = 512;
-const int MAX_COMMAND_ARRAY_SIZE = 1024;
 const char STEPS_PER_REV = 200;
 const float SLEEP_DELAY = 15000.0;
 
