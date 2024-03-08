@@ -7,7 +7,6 @@
 #include <ESP32Servo.h>
 
 extern BLEService controlService;
-extern Servo myServo;
 extern AccelStepper w1;
 extern AccelStepper w2;
 extern AccelStepper w3;
@@ -17,8 +16,6 @@ extern float speed;
 extern int isSleeping;
 extern float direction;
 extern float rotation;
-extern char command[MAX_COMMAND_SIZE];
-extern int penState;
 extern long unsigned int wakeTimer;
 
 #endif
