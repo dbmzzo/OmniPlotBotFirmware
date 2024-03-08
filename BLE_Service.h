@@ -5,10 +5,6 @@
 #include <ArduinoBLE.h>
 #include <AccelStepper.h>
 
-extern BLEIntCharacteristic stateChar;
-extern BLEIntCharacteristic penChar;
-extern BLEFloatCharacteristic battChar;
-
 void characteristicWrittenHandler(BLEDevice central, BLECharacteristic characteristic);
 void initBLEService();
 void serviceLoop();

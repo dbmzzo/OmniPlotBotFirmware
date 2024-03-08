@@ -25,15 +25,14 @@ void initBLEService() {
   BLE.setEventHandler(BLEConnected, blePeripheralConnectHandler);
   BLE.setEventHandler(BLEDisconnected, blePeripheralDisconnectHandler);
   BLE.setLocalName("OmniPlotBot");
+
   directionChar.addDescriptor(directionDesc);
   directionChar.setEventHandler(BLEWritten, characteristicWrittenHandler);
-  
   controlService.addCharacteristic(directionChar);
   directionChar.writeValue(0);
 
   rotationChar.addDescriptor(rotationDesc);
   rotationChar.setEventHandler(BLEWritten, characteristicWrittenHandler);
-  
   controlService.addCharacteristic(rotationChar);
   rotationChar.writeValue(0);
 
