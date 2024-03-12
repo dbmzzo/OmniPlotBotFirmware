@@ -12,7 +12,7 @@ const char W3_STEP = 16;
 const char W3_DIR = 15;
 const char SLEEP = 18;
 
-const int RUN_SPEED = 4000;
+const int RUN_SPEED = 3000;
 const int ACCELERATION = 100;
 const char FEED_SPEED = 150;
 const int MAX_COMMAND_SIZE = 512;

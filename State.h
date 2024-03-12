@@ -5,7 +5,6 @@
 #include <AccelStepper.h>
 #include <MultiStepper.h>
 
-extern BLEService controlService;
 extern AccelStepper w1;
 extern AccelStepper w2;
 extern AccelStepper w3;

@@ -3,6 +3,8 @@
 #include "BLE_Service.h"
 #include "Constants.h"
 
+BLEService controlService(SERVICE_UUID);
+
 BLEFloatCharacteristic directionChar(DIR_UUID, BLEWriteWithoutResponse);
 BLEDescriptor directionDesc(DESC_UUID, "Direction");
 

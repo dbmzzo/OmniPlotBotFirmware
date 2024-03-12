@@ -9,9 +9,6 @@
 void setup()
 {
   Serial.begin(115200);
-  pinMode(18, OUTPUT);
-  digitalWrite(18, HIGH);
-  myServo.attach(17);
   initBLEService();
   initMotionService();
 }

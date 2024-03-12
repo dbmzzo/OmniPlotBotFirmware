@@ -42,6 +42,8 @@ void checkSleepLoop()
 
 void initMotionService()
 {
+  pinMode(SLEEP, OUTPUT);
+  digitalWrite(SLEEP, HIGH);
   w1.setMaxSpeed(RUN_SPEED);
   w3.setMaxSpeed(RUN_SPEED);
   w2.setMaxSpeed(RUN_SPEED);
